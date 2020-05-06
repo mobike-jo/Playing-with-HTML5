@@ -1,0 +1,222 @@
+.greenHeader {
+    color:rgb(95, 110, 38);
+}
+
+h1 {
+    color: red;
+    text-align: center;
+    text-shadow: 4px 4px 5px rgb(20, 250, 89);
+}
+
+a {
+    text-decoration-line: none;
+}
+
+#newText {
+    color: orange;
+}
+
+.container {
+    border: 10px dashed rgb(43, 103, 233);
+    margin: 50px 5px;
+    padding: 30px 5px;
+}
+
+.Box {
+    background: blueviolet;
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+}
+
+/* animation */
+@keyframes fadeMe {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#box2 {
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle, purple, orange, yellow, pink, purple);    
+}
+
+@keyframes getBigger {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(.5);}
+}
+
+#box3 {
+    animation: getBigger 5s 8;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    border-radius: 50%;
+    background: red;
+}
+
+@keyframes changeColors {
+    0% {background-color: grey;}
+    25% {background-color: blue;}
+    50% {background-color: purple;}
+    75% {background-color: pink}
+    100% {background-color: gray;}
+
+}
+
+#box4 {
+    animation: changeColors 5s 2 forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes moveBox {
+    0% {left: 0px; top: 0px} /*where it is NOW*/
+    25% {left: 100px; top: 0px} /* moves 100 pixels to the right*/
+    50% {left: 100px; top: 200px} /* moves 000 pixels down*/
+    75% {left: 0px; top: 200px} /* back left 100 px */
+    100% {left: 0px; top: 0px} /*back to the start*/
+}
+
+#box5 {
+    position: relative;
+    animation: moveBox 5s 3s;
+    background: yellow;
+}
+
+#box6 {
+    top: 100px; /*100 down*/
+    left: 200px; /*200 to the right*/
+    /* position: fixed; GOOD if you want a moving nav bar */
+    position: relative;
+}
+
+nav {
+    background-color: aqua;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.circle-img {
+    border-radius: 500%;
+}
+
+img {
+    box-shadow: 8px 8px 10px 5px rgb(142, 149, 165);
+}
+
+.flex {
+    margin: 30px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: center;
+}
+
+.input-field {
+    margin: 20px;
+}
+/* FORM */
+form input, textarea, button {
+    display: block;
+    margin: 30px;
+}
+g
+.nav-wrapper {
+    background-color: blue;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20%) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: #fff;
+    color: #444;
+}
+
+.box {
+    background-color: #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+}
+
+.a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col / span 5 ;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(pink, yellow,purple,orange);
+}
+.d {
+    grid-column: col 1 / span  3 ;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+}
+
+.e {
+    grid-column: col 3 / span  3;
+    grid-row: row 3;
+    display: flex;
+    justify-content: center;
+}
+
+.f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20; /* if this should be ontop, needs to be higher number than .box*/
+    display: flex;
+    justify-content: center;
+    background-image: radial-gradient(red, blue);
+    
+
+}
